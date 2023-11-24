@@ -64,45 +64,14 @@ document.addEventListener("DOMContentLoaded", function(){
   });
   
 });
-        
-
-/*
-//-------- MUDAR A COR -------
-document.addEventListener('mousemove', function(event) {
-  // Obter a posição do mouse em relação à largura e altura da janela
-  const mouseX = event.clientX / window.innerWidth;
-
-  //let estiloComputado = getComputedStyle(document.documentElement); // Obtém o estilo computado do elemento desejado
-
-  let novaCor;
-
-  if(mouseX < window.innerWidth/3){
-    novaCor= "#62AB91"; //verde
-  }
-
-  else if(mouseX > window.innerWidth/3 && mouseX < 2* window.innerWidth/3){
-    novaCor= "#CC0066"; //rosa
-  }
-   else{
-    novaCor = "#CCCC00"; //amarelo
-  }
-
-  console.log("mouse x:", mouseX, "Nova Cor:", novaCor);
-  document.documentElement.style.setProperty('--corprincipal', novaCor);
-
-  /*if(mouseX < window.innerWidth/3){
-    let verde = "#62AB91"; //nova cor
-    document.body.style.setProperty('--corprincipal', verde); // Define a variável --corprincipal com a nova cor
-  }
-
-  if(mouseX > window.innerWidth/3 && mouseX < 2* window.innerWidth/3){
-    let rosa = "#CC0066"; //nova cor
-    document.body.style.setProperty('--corprincipal', rosa); // Define a variável --corprincipal com a nova cor
-  }
-  if(mouseX > 2* window.innerWidth/3){
-    let amarelo = "#CCCC00"; //nova cor
-    document.body.style.setProperty('--corprincipal', amarelo); // Define a variável --corprincipal com a nova cor
-    document.documentElement.style.setProperty('--corprincipal', amarelo);
-  }
-  console.log('Mouse move event captured');*/
-//});
+  
+//----MUDAR COR----
+function mudaCor(){ //amarelo
+  document.documentElement.style.setProperty('--corprincipal', '#62AB91');
+}
+function mudaCor1(){ //beje
+  document.documentElement.style.setProperty('--corprincipal', '#CCCC00');
+}
+function mudaCor2(){ //verde
+  document.documentElement.style.setProperty('--corprincipal', '#CBBBA0');
+}
