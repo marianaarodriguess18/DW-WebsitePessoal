@@ -1,0 +1,363 @@
+body{
+    background-color: #F7F7F7;
+    font-family: Barlow;
+    word-wrap: break-word;
+    font-size: 20px;
+    overflow-x: hidden;
+
+    --branco: #F7F7F7;
+    --cinzentoclaro: #EBEBEB;
+    --corprincipal: #62AB91;
+    --cinzentoescuro: #464646;
+
+
+}
+.linhaTexto{
+    position:absolute;
+    font-family: barlow;
+    color: var(--corprincipal);
+    font-size: 20px;
+    font-weight: 600;
+    pointer-events: none;
+}
+
+/* MENU*/
+.menu{
+    position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+    background-color: var(--branco);
+    z-index: 4;
+}
+ .home{
+    height: 40px;
+ }
+.links {
+    display: grid;
+	grid-template-columns: repeat(var(--items), 1fr);
+	position: relative;
+}
+
+.links > a {
+    color: var(--corprincipal);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 8% 4%;
+    margin:0;
+    text-transform: uppercase;
+}
+
+.links a:hover{
+    color: var(--cinzentoescuro);
+    font-weight: 800;
+    cursor: pointer;
+}
+/*-------*/
+
+.site{ /* Grelha */
+    display: grid;
+    grid-template-columns: 1fr;
+    margin: 0% 10%;
+    grid-template-areas: "fotoinicial" "aboutme" "portfolio" "contacts";
+    height: 480vh;
+}
+.intro{
+    overflow: hidden;
+    height:100vh;
+    grid-template-rows: 1fr;
+    place-items: center;
+    height: 96%; 
+    grid-area: fotoinicial; 
+    position: relative; 
+    top: 16% ;
+    left: 6%;
+}
+
+.aboutMe{
+    grid-area: aboutme;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 3fr 2fr;
+    grid-template-areas:  "texto imagemPerfil" ;
+    grid-gap: 10%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.texto{
+    grid-area: texto;
+    color: var(--cinzentoescuro);
+    font-weight: 400;
+}
+
+.titulo{
+    margin-top: 8%;
+    grid-column-start: 1;
+    grid-column-end: 5; 
+    font-size: 40px; 
+    font-weight: 800; 
+    color: var(--corprincipal); 
+    text-transform: uppercase;
+}
+
+.fotoPerfil{
+    grid-area: imagemPerfil;
+}
+.imagemPerfil{
+    width:100%;
+    border-radius: 10px;
+}
+
+.portfolio{
+    grid-area: portfolio;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 2%;
+    grid-row-gap: 2%;
+    height: 200vh;
+    margin: 0;
+    padding: 0;
+}
+.box{
+    width: 100%;
+    background-color: var(--cinzentoclaro);
+    border-radius: 10px;
+}
+.imagemportfolio{
+    width: 88%;
+    margin: 6%;
+}
+
+.contacts{
+    grid-area: contacts;
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr;
+    grid-gap: 10%;
+    grid-row-gap: 0;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+.contacts a {
+    width: 60%;
+}
+
+.circle{
+    background-color: var(--corprincipal);
+    border-radius: 50%;
+}
+
+
+/* FOOTER */
+footer{
+    width: 10%;
+    position: fixed;
+	bottom: 0;
+	left: 0;
+}
+
+footer button {
+    padding: 6% 6%;
+    margin:0;
+    border: none;
+    background-color: var(--branco);
+}
+.apagar {
+    width: 60%;
+}
+footer button:hover{
+    cursor: pointer;
+}
+/*-------*/
+@media only screen and (max-width: 1000px) and (min-width: 700px){
+    .intro{
+        position: relative; 
+        left: 0%;
+    }
+} 
+@media only screen and (max-width: 800px) and (min-width: 600px){
+    body {
+        font-size: 18px;
+    }
+    .linhaTexto{
+        font-size: 18px;
+    }
+    
+    /* MENU*/ 
+    .links{
+        grid-template-columns: auto repeat(3, 1fr);
+    }   
+    .links > a {
+        font-size: 22px;
+        padding: 6% 4%;
+    }
+    .site{ /* Grelha */
+        margin: 0% 8%;
+    }
+
+    .portfolio{
+        display: block;
+        height: 500vh;
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 90%;
+        background-color: var(--cinzentoclaro);
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .imagemportfolio{
+        width: 80%;
+        margin: 8%;
+        margin-bottom: 2%;
+    }
+    .contacts{
+        display: block;
+        height: 100vh;
+        place-items: center;
+        padding: 10%;
+    }
+    .contacts a {
+        width: 40%;
+    }
+    .circle{
+        width: 30%;
+        background-color: var(--corprincipal);
+        border-radius: 50%;
+        position: relative;
+        left: 20%;
+        margin: 10%;
+    }
+    /* FOOTER */
+footer{
+    width: 18%;
+    position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.apagar {
+    width: 80%;
+}
+footer button {
+    padding: 6% 6%;
+    margin:0;
+    border: none;
+    background-color: var(--branco);
+}
+footer button:hover{
+    cursor: pointer;
+}
+/*-------*/
+}
+@media only screen and (max-width: 600px) { /*Para telemóvel*/
+    body {
+        font-size: 16px;
+    }
+    .linhaTexto{
+        font-size: 18px;
+    }
+    
+    /* MENU*/ 
+    .links{
+        grid-template-columns: auto repeat(3, 1fr);
+    }   
+    .links > a {
+        font-size: 22px;
+        padding: 6% 4%;
+    }
+    .home{
+        height: 30px;
+        padding: 20%;
+    }
+
+    .site{ /* Grelha */
+        margin: 0% 8%;
+    }
+
+    .intro{
+        height: 100%; 
+        grid-area: fotoinicial; 
+        position: relative; 
+        top: 70% ;
+        left: -4%;
+    }
+    
+    .aboutMe{
+        margin-top: 80%;
+        grid-template-columns: 1fr;
+        grid-template-areas:  "texto" "imagemPerfil" ;
+        grid-row-gap: 0;
+    }
+    .titulo{ 
+        margin-top: 10%;
+        font-size: 36px; 
+    }
+    .imagemPerfil{
+        height: 80%;
+    }
+
+    
+    .portfolio{
+        display: block;
+        height: 440vh;
+        margin: 0;
+        padding: 0;
+    }
+    .box{
+        width: 100%;
+        background-color: var(--cinzentoclaro);
+        border-radius: 10px;
+        font-size: 20px;
+    }
+    .imagemportfolio{
+        width: 80%;
+        margin: 10%;
+        margin-bottom: 2%;
+    }
+    .contacts{
+        display: block;
+        height: 100vh;
+        place-items: center;
+        padding: 10%;
+    }
+    .contacts a {
+        width: 40%;
+    }
+    
+    .circle{
+        width: 30%;
+        background-color: var(--corprincipal);
+        border-radius: 50%;
+        position: relative;
+        left: 20%;
+        margin: 10%;
+    }
+    /* FOOTER */
+footer{
+    width: 20%;
+    position: fixed;
+	bottom: 0;
+	left: 0;
+}
+.apagar {
+    width: 100%;
+}
+footer button {
+    padding: 6% 6%;
+    margin:0;
+    border: none;
+    background-color: var(--branco);
+}
+footer button:hover{
+    cursor: pointer;
+}
+/*-------*/
+    
+  }
